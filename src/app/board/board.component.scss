@@ -8,3 +8,18 @@ app-square {
     border: 1px gray solid;
     height: 200px;
 }
+
+#center {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#newgame {
+    width: 200px;
+    height: 50px;
+}
+
+#spacer {
+    height: 20px
+}
