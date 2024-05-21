@@ -1,0 +1,3 @@
+rm -rf ./docs/server
+mv ./docs/browser/* ./docs
+rm -r ./docs/browser
