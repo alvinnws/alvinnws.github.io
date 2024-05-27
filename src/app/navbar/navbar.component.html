@@ -3,22 +3,34 @@
     <div id="logo"><img src="../../assets/Banner120x40.png"></div>
     <div id="links">
         <a mat-button routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
-        <button mat-button [matMenuTriggerFor]="about">About</button>
-        <mat-menu #about="matMenu">
-            <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Summary</a>
-            <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Work</a>
-            <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Education</a>
-        </mat-menu>
-        <button mat-button [matMenuTriggerFor]="Projects">Projects</button>
-        <mat-menu #Projects="matMenu">
-            <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">TypeHint</a>
-            <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Portfolio Website</a>
-        </mat-menu>
-        <button mat-button [matMenuTriggerFor]="menu">Minigames</button>
-        <mat-menu #menu="matMenu">
-            <a mat-menu-item routerLink="/minigames/tictactoe" routerLinkActive="active" ariaCurrentWhenActive="page">Tic-Tac-Toe</a>
-        </mat-menu>
-        <a mat-button routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
+        <button mat-button disabled [matMenuTriggerFor]="about">About</button>
+        <button mat-button disabled [matMenuTriggerFor]="projects">Projects</button>
+        <button mat-button [matMenuTriggerFor]="minigames">Minigames</button>
+        <a mat-button disabled routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
     </div>
+    <div id="mobile-menu">
+        <button mat-button [matMenuTriggerFor]="mobile">
+            <mat-icon>menu</mat-icon> Menu
+        </button>
+    </div>
+    <mat-menu #mobile="matMenu">
+        <button mat-menu-item routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Home</button>
+        <button mat-menu-item disabled [matMenuTriggerFor]="about">About</button>
+        <button mat-menu-item disabled [matMenuTriggerFor]="projects">Projects</button>
+        <button mat-menu-item [matMenuTriggerFor]="minigames">Minigames</button>
+        <a mat-menu-item disabled routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
+    </mat-menu>
+    <mat-menu #about="matMenu" xPosition="before">
+        <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Summary</a>
+        <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Work</a>
+        <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Education</a>
+    </mat-menu>
+    <mat-menu #projects="matMenu">
+        <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">TypeHint</a>
+        <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Portfolio Website</a>
+    </mat-menu>
+    <mat-menu #minigames="matMenu">
+        <a mat-menu-item routerLink="/minigames/tictactoe" routerLinkActive="active" ariaCurrentWhenActive="page">Tic-Tac-Toe</a>
+    </mat-menu>
     <div id="spacer"></div>
 </nav>
