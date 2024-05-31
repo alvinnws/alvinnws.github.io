@@ -1,20 +1,23 @@
 
 <div id="center">
-    <p>Current Player: {{ player }} </p>
+  <p>Current Player: {{ player }} </p>
 </div>
 <div id="center">
-    <button id="newgame" (click)="newGame()">Start New Game</button>
+  <button id="newgame" (click)="newGame()">Start New Game</button>
 </div>
 <div id="center">
-    <p *ngIf="winner">
-        Player {{ winner }} won the game!
+  @if (winner) {
+    <p>
+      Player {{ winner }} won the game!
     </p>
+  }
 </div>
 
 <main id="center">
+  @for (val of squares; track val; let i = $index) {
     <app-square
-        *ngFor="let val of squares; let i = index"
-        [value]="val"
-        (click)="makeMove(i)">
+      [value]="val"
+      (click)="makeMove(i)">
     </app-square>
+  }
 </main>

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, OnInit } from '@angular/core';
 import { SquareComponent } from "../square/square.component";
 
@@ -7,7 +7,7 @@ import { SquareComponent } from "../square/square.component";
     standalone: true,
     templateUrl: './board.component.html',
     styleUrl: './board.component.scss',
-    imports: [CommonModule, SquareComponent]
+    imports: [SquareComponent]
 })
 export class BoardComponent implements OnInit {
   squares: any[] = [];
