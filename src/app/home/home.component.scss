@@ -1,8 +1,39 @@
 @import '../../styles.scss';
 
+div h3 pre{
+    margin-top: 0px;
+    margin-bottom: -5px;
+}
+
+mat-card p {
+    margin: 2px 0px 2px 0px;
+}
+
+mat-card h3 {
+    margin-top: 0px;
+}
+
 #links {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+#skills {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#skillitem {
+    width: 150px;
+    padding: 15px;
+    margin:5px;
+    border: 1px solid black;
+}
+
+#learn-more {
+    color: black;
 }

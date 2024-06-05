@@ -1,3 +1,4 @@
 rm -rf ./docs/server
 mv ./docs/browser/* ./docs
 rm -r ./docs/browser
+echo "www.alvinns.com" > docs/CNAME

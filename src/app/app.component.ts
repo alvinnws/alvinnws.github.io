@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { BoardComponent } from "./tictactoe/board/board.component";
+import { BoardComponent } from "./minigames/tictactoe/board/board.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 
 @Component({
