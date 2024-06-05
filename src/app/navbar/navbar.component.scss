@@ -1,6 +1,6 @@
 @import '../../styles.scss';
 
-nav {
+mat-toolbar {
     height: 50px;
     width: 100%;
     margin: 0px;
@@ -11,6 +11,11 @@ nav {
     position: fixed;
     top: 0;
     background-color: white;
+    z-index: 2000 !important;
+}
+
+div img {
+    margin:5px 0px 5px 0px;
 }
 
 #spacer {
@@ -19,6 +24,7 @@ nav {
 
 #logo {
     width: 120px;
+    height: 50px;
     text-align: center;
     cursor: pointer;
 }
