@@ -6,11 +6,12 @@ import { ContactComponent } from './contact/contact.component';
 import { MinigamesComponent } from './minigames/minigames.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'contact-me', component: ContactComponent },
-    { path: 'minigames', component: MinigamesComponent,
+    { path: '', title: 'Alvin Ng Wei Sing | Home', component: HomeComponent },
+    { path: 'contact-me', title: 'Contact Me | Alvin Ng', component: ContactComponent },
+    { path: 'minigames', title: 'Minigames | Alvin Ng',
         children: [
-            { path: 'tic-tac-toe', component: BoardComponent }
+            { path: 'tic-tac-toe', title: 'Tic-Tac-Toe | Alvin Ng', component: BoardComponent },
+            { path: '', pathMatch: 'full', component: MinigamesComponent }
         ]},
     { path: '**', pathMatch:'full', component: PagenotfoundComponent }
 ];
