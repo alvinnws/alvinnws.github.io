@@ -3,18 +3,35 @@ a {
     text-decoration: none;
 }
 
+b {
+    position: relative;
+    bottom: 10px;
+    left: 3px;
+    font-weight: normal;
+}
+
+p {
+    text-wrap: wrap;
+}
+
+svg {
+    margin-top: 10px;
+}
+
+#bg {
+    background-image: linear-gradient(#ffe8e8, #f1ca91);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
 #mainblock {
-    max-width: min(80%,650px);
     margin-left: auto;
     margin-right: auto;
-    height: auto;
-    background-color: white;
-    padding: 50px;
 }
 
 .center {
-    display: flex;
-    width: 100%;
+    width: 261.33px;
     margin-top: 15px;
     justify-content: center;
     align-items: center;
@@ -25,7 +42,7 @@ a {
     width: 250px;
     height: 50px;
     border: 1px solid black;
-    border-radius: 7px;
+    border-radius: 10px;
     margin: 5px;
     text-align: center;
     line-height: 50px;
