@@ -1,4 +1,9 @@
 <app-navbar></app-navbar>
-<div id="mainblock">
+@if (this.location.path() != "/links") {
+  <div id="mainblock">
+    <router-outlet></router-outlet>
+  </div>
+}
+@else {
   <router-outlet></router-outlet>
-</div>
+}
