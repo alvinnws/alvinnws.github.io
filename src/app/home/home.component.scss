@@ -1,5 +1,9 @@
 @import '../../styles.scss';
 
+p {
+    text-justify: inter-word;
+}
+
 div h3 pre{
     margin-top: 0px;
     margin-bottom: -5px;
@@ -11,6 +15,36 @@ mat-card p {
 
 mat-card h3 {
     margin-top: 0px;
+}
+
+#bg {
+    margin: 0px;
+    height: auto;
+    background-color: rgba(255,186,173,1);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#title {
+    height: 90vh;
+    width: min(60%,650px);
+}
+
+#title-holder {
+    width: 100%; 
+    height: 100vh; 
+    background-image: linear-gradient(rgba(210,177,255,1) 0%, rgba(252,199,255,1) 19%, rgba(255,186,173,1) 100%);
+    display: flex;
+    justify-content: center;
+}
+
+#body {
+    max-width: min(80%,650px);
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 50px 20px 20px 20px;
 }
 
 #links {
