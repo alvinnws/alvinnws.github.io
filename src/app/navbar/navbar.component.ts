@@ -14,6 +14,6 @@ import { Location } from '@angular/common';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  constructor(private router: Router, public location: Location) {
+  constructor(public location: Location) {
   }
 }
