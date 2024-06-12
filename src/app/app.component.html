@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-@if (this.location.path() != "/links") {
+@if (this.location.path() != "/links" && this.location.path() != "") {
   <div id="mainblock">
     <router-outlet></router-outlet>
   </div>
