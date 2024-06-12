@@ -2,6 +2,7 @@
   "routes": [
     "/",
     "/contact-me",
+    "/links",
     "/minigames",
     "/minigames/tic-tac-toe"
   ]
