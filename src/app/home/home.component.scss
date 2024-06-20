@@ -4,6 +4,23 @@ p {
     text-justify: inter-word;
 }
 
+img {
+    width: 100%;
+    height: auto;
+    grid-column-start: 3;
+    border-radius: 10px;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    align-self: start;
+}
+
+div h1 {
+    width: auto;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
 div h3 pre{
     margin-top: 0px;
     margin-bottom: -5px;
@@ -26,6 +43,9 @@ mat-card h3 {
 }
 
 #title {
+    display: grid;
+    grid-template-columns: 60fr 5fr 35fr;
+    grid-template-rows: 1fr 0.5fr 0fr 5fr;
     height: 90vh;
     width: min(60%,650px);
 }
@@ -36,6 +56,13 @@ mat-card h3 {
     background-image: linear-gradient(rgba(210,177,255,1) 0%, rgba(252,199,255,1) 19%, rgba(255,186,173,1) 100%);
     display: flex;
     justify-content: center;
+}
+
+#about {
+    text-align: justify;
+    grid-column-start: 1;
+    grid-row-start: 4;
+    grid-row-end: 4;
 }
 
 #body {
@@ -70,4 +97,28 @@ mat-card h3 {
 
 #learn-more {
     color: black;
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+    img {
+        margin-top: 5vh;
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        object-position: 0% 25%;
+    }
+    
+    #title {
+        display: block;
+    }
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
 }
