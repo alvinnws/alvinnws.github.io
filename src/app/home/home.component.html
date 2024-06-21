@@ -1,18 +1,21 @@
 <div id="bg">
+    <div id="menu">
+        <button mat-button [mat-menu-trigger-for]="menu" style="margin: 5px 0px 0px 5px;">Menu</button>
+        <mat-menu #menu></mat-menu>
+    </div>
     <div id="title-holder" >
         <div id="title">
             <img src="../../assets/HomePic.jpg" alt="Picture of Alvin Ng">
             <h1>Hello! I'm Alvin Ng </h1>
             <div id="about">
-            <p>I'm currently a student at Singapore University of Technology and Design, where I intend to major in Computer Science and Design. I'm honoured to be a recepient of the SUTD Global Distinguished Scholarship, and look foward to making the most of my time and abilities as an undergraduate.</p>
-            <p>Prior to university, I scored AAA/AA in the 2021 GCE 'A' Level Examination as a student of Anderson Serangoon Junior College.</p>
+                <p>I'm currently a student at Singapore University of Technology and Design, where I intend to major in Computer Science and Design. I'm honoured to be a recepient of the SUTD Global Distinguished Scholarship, and look foward to making the most of my time and abilities as an undergraduate.</p>
+                <p>Prior to university, I scored AAA/AA in the 2021 GCE 'A' Level Examination as a student of Anderson Serangoon Junior College.</p>
+                <p>(yes, my hair was very red, and no, it is no longer red)</p>
+                <p style="font-weight: bold;">Scroll down for more</p>
             </div>
-            
         </div>
     </div>
     <div id="body">
-    <h2>About</h2>
-    <a id="learn-more" routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">Learn more about me</a>
     <h2>Skills</h2>
     <div id="skills">
         <mat-card id="skillitem">
