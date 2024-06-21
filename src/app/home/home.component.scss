@@ -44,14 +44,23 @@ mat-card h3 {
 
 #menu {
     width: 100%;
-    height: 30px;
+    height: 40px;
     position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+#menu-divider {
+    position: fixed; 
+    top: 40px; 
+    width: min(80%,650px);
+    margin: auto;
 }
 
 #title {
     display: grid;
     grid-template-columns: 60fr 5fr 35fr;
-    grid-template-rows: 1fr 0.5fr 0fr 5fr;
+    grid-template-rows: 1fr 0.5fr 0fr 5fr 0.3fr;
     margin-top: 10px;
     height: 90vh;
     width: min(80%,650px);
@@ -71,6 +80,14 @@ mat-card h3 {
     grid-column-start: 1;
     grid-row-start: 4;
     grid-row-end: 4;
+}
+
+#scroll {
+    font-weight: lighter; 
+    grid-column: 1 3;
+    grid-row: 5;
+    display: flex;
+    justify-content: center;
 }
 
 #body {
@@ -108,7 +125,7 @@ mat-card h3 {
 }
 
 /* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 773px) {
     img {
         margin-top: 5vh;
         height: 300px;
