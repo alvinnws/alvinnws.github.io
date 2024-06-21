@@ -45,6 +45,9 @@ export class HomeComponent {
     } else {
       e.style.backgroundColor = this.cToRGBA(this.c3);
     }
+
+    let f = document.querySelector('#scroll') as HTMLElement;
+    f.style.opacity = String(1 - (window.scrollY/(document.documentElement.clientHeight*0.7)));
   }
 
   calcRGB(c1: any, c2: any, p: number) {
