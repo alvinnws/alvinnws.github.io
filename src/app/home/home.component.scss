@@ -84,7 +84,8 @@ mat-card h3 {
 
 #scroll {
     font-weight: lighter; 
-    grid-column: 1 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
     grid-row: 5;
     display: flex;
     justify-content: center;
