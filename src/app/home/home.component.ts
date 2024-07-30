@@ -4,11 +4,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import { RouterOutlet, RouterLink, RouterLinkActive, Scroll } from '@angular/router';
 import { bindCallback } from 'rxjs';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatMenuModule, MatCardModule],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatMenuModule, MatCardModule, MatIcon],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
