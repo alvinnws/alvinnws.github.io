@@ -1,18 +1,18 @@
 import { Component, HostListener } from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
-import { RouterOutlet, RouterLink, RouterLinkActive, Scroll } from '@angular/router';
-import { bindCallback } from 'rxjs';
-import { MatIcon } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatMenuModule, MatCardModule, MatIcon],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatMenuModule, MatCardModule, MatIconModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent {
   //rgba(210,177,255,1) 0%, rgba(252,199,255,1) 19%, rgba(255,186,173,1) 100%
   c1: { red:number, green:number, blue:number }= {
