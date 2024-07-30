@@ -1,7 +1,13 @@
 <div id="bg" >
-    <div id="menu" style="display: none" >
-        <button mat-button [mat-menu-trigger-for]="menu" style="margin: 5px min(70%, 610px) 0px 5px;">Menu</button>
-        <mat-menu #menu></mat-menu>
+    <div id="menu" >
+        <button mat-button [mat-menu-trigger-for]="menu" style="margin: 5px min(70%, 610px) 0px 5px;"><mat-icon>menu</mat-icon>Menu</button>
+        <button mat-button>
+            <mat-icon></mat-icon>
+        </button>
+        <mat-menu #menu>
+            <a mat-menu-item>Projects</a>
+            <a mat-menu-item>Resume</a>
+        </mat-menu>
         <hr id="menu-divider">
     </div>
     <div id="title-holder">
