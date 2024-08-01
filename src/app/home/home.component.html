@@ -1,9 +1,8 @@
 <div id="bg" >
     <div id="menu" >
         <button mat-button [mat-menu-trigger-for]="menu" style="margin: 5px min(60%, 590px) 0px 5px;"><mat-icon>menu</mat-icon>Menu</button>
-        <button style="margin: 5px 0px 0px 0px" mat-button>
-            <ng-icon style="scale: 1.5" name="octMarkGithub"></ng-icon>
-        </button>
+        <ng-icon (click)="goGithub()"   style="margin: 15px 7px 0px 0px; scale: 1.5; cursor: pointer;" name="octMarkGithub"></ng-icon>
+        <ng-icon (click)="goLinkedIn()" style="margin: 15px 0px 0px 7px; scale: 1.5; cursor: pointer;" name="bootstrapLinkedin"></ng-icon>
         <mat-menu #menu>
             <a mat-menu-item>Projects</a>
             <a mat-menu-item>Resume</a>

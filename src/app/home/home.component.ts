@@ -6,6 +6,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { octMarkGithub } from '@ng-icons/octicons';
+import { bootstrapLinkedin } from '@ng-icons/bootstrap-icons';
+
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,7 @@ import { octMarkGithub } from '@ng-icons/octicons';
   imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatMenuModule, MatCardModule, MatIconModule, NgIconComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  viewProviders: [provideIcons({octMarkGithub})]
+  viewProviders: [provideIcons({octMarkGithub, bootstrapLinkedin})]
 })
 
 export class HomeComponent {
@@ -75,4 +77,11 @@ export class HomeComponent {
     return st;
   }
 
+  goGithub() {
+    window.location.href='https://www.github.com/alvinnws'
+  }
+
+  goLinkedIn() {
+    window.location.href='https://www.linkedin.com/in/alvinnws'
+  }
 }
