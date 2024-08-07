@@ -2,17 +2,16 @@ import { Component, HostListener } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { octMarkGithub } from '@ng-icons/octicons';
 import { bootstrapLinkedin } from '@ng-icons/bootstrap-icons';
-
+import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatMenuModule, MatCardModule, MatIconModule, NgIconComponent],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatTabsModule, MatMenuModule, MatIconModule, NgIconComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   viewProviders: [provideIcons({octMarkGithub, bootstrapLinkedin})]

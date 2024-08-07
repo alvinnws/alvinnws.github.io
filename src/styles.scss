@@ -6,7 +6,7 @@ $portfolio-primary: mat.m2-define-palette(mat.$m2-red-palette, A100, 100, A200, 
 $portfolio-accent: mat.m2-define-palette(mat.$m2-green-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$portfolio-warn: mat.m2-define-palette(mat.$m2-red-palette);
+$portfolio-warn: mat.m2-define-palette(mat.$m2-deep-orange-palette,900);
 $portfolio-theme: mat.m2-define-light-theme((
   color: (
     primary: $portfolio-primary,
