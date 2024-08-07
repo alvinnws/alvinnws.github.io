@@ -1,10 +1,10 @@
 <div id="bg" >
     <div id="menu" >
         <button mat-button [mat-menu-trigger-for]="menu" style="margin: 5px min(60%, 590px) 0px 5px;"><mat-icon>menu</mat-icon>Menu</button>
-        <ng-icon (click)="goGithub()"   style="margin: 15px 7px 0px 0px; scale: 1.5; cursor: pointer;" name="octMarkGithub"></ng-icon>
-        <ng-icon (click)="goLinkedIn()" style="margin: 15px 0px 0px 7px; scale: 1.5; cursor: pointer;" name="bootstrapLinkedin"></ng-icon>
-        <mat-menu #menu>
-            <a mat-menu-item>Projects</a>
+        <ng-icon (click)="goGithub()"   style="margin: 13px 7px 0px 0px; scale: 1.5; cursor: pointer;" name="octMarkGithub"></ng-icon>
+        <ng-icon (click)="goLinkedIn()" style="margin: 13px 0px 0px 7px; scale: 1.5; cursor: pointer;" name="bootstrapLinkedin"></ng-icon>
+        <mat-menu #menu class="test">
+            <a mat-menu-item class="test">Projects</a>
             <a mat-menu-item>Resume</a>
         </mat-menu>
         <hr id="menu-divider">
@@ -14,43 +14,52 @@
             <img src="../../assets/HomePic.jpg" alt="Picture of Alvin Ng">
             <h1 style="margin: 0px;">Hi! I'm Alvin Ng Wei Sing</h1>
             <div id="about">
-                <p>I'm currently a student at Singapore University of Technology and Design, where I intend to major in Computer Science and Design. I'm honoured to be a recepient of the SUTD Global Distinguished Scholarship, and look foward to making the most of my time and abilities as an undergraduate.</p>
-                <p>At the moment, I'm working as a Project Engineer intern at MLS Logistic Services. My role specialises in enhancing workflows through use of automations.</p>
-                <p>While the rest of this website is a work in progress, you may find its repo <a href="https://www.github.com/alvinnws/alvinnws.github.io" style="color: black">here</a>. Feel free to contact me via <a href="https://www.linkedin.com/in/alvinnws/" style="color: black">LinkedIn</a> or <a href="mailto:official@alvinnws.com" style="color: black">email</a>.</p>
-                <p>(yes, my hair was very red, and no, it is no longer red)</p>
-                
+                <p>Currently, I'm an undergraduate at Singapore University of Technology and Design, where I intend to major in Computer Science and Design.</p>
+                <p>Thus far, I have dedicated my time to learning about data analytics and artificial intelligence. I enjoy solving complicated logical problems and hope to merge my strengths with practical applications.</p>
+                <p>At my previous internship, I specialised in automating workflows, seeing up to 20x increase in efficiency in some professionals.</p>
             </div>
-            <div id="scroll" style="display: none">
+            <div id="scroll">
                 <p>Scroll down for more</p>
             </div>
         </div>
     </div>
     <div id="body">
-        <h2 style="display: none">Skills</h2>
-        <div id="skills" style="display: none">
-            <mat-card id="skillitem">
-                <h3>Languages</h3>
-                <p>Python</p>
-                <p>Java</p>
-                <p>Javascript</p>
-                <p>HTML/CSS</p>
-                <p>SQL</p>
-            </mat-card>
-            <mat-card id="skillitem">
-                <h3>Software</h3>
-                <p>Procreate</p>
-                <p>Photoshop</p>
-                <p>Illustrator</p>
-            </mat-card>
-            <mat-card id="skillitem">
-                <h3>Frameworks/ Libraries</h3>
-                <p>Tensorflow</p>
-                <p>Angular</p>
-            </mat-card>
-            <mat-card id="skillitem">
-                <h3>Tools</h3>
-                <p>Git</p>
-            </mat-card>
-        </div>
+        <mat-tab-group [color]="'warn'">
+            <mat-tab label="Work">
+                <h3>Project Engineer Intern<span style="font-weight: normal;">, MLS Logistic Services</span></h3>
+                <p><i>May 2024 - Aug 2024</i></p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <p><b>Software Used:</b> UiPath, Microsoft Power Platform (Power BI, Power Automate and Power Apps)</p>
+                <p>I specialised in creating automations to improve efficiency in workflows. My work challenged me as not only did I need to ideate and create these automations, I also had to cater them to a less tech-savvy audience.</p>
+                <p>An emphasis was placed in ensuring my solutions could be maintained by the users. This meant that I had to simplify my work to a large extent, including foreseeing potential adjustments that needed to be made, and teaching the basics of the program.</p>
+                
+            </mat-tab>
+            <mat-tab label="Projects">
+                <h3>Resume Website</h3>
+                <p><i><a href="" class="repo">Repository</a></i></p>
+            </mat-tab>
+            <mat-tab label="Education">
+                <h3>Singapore University of Technology and Design</h3>
+                <i>Jan 2024 - May 2028 (expected)</i>
+            </mat-tab>
+            <mat-tab label="Certificates">
+                <h3>Data Analytics<span style="font-weight: normal;">, Google</span></h3>
+                <p><i>2024</i></p>
+                <p><b>Technology Used: </b>R, SQL, Tableau</p>
+                <p></p>
+                <br>
+                <h3>Introduction to Artificial Intelligence<span style="font-weight: normal;">, Harvard University</span></h3>
+                <p><i>2024</i></p>
+                <p><b>Technology Used: </b>Python, Tensorflow, Natural Language Toolkit</p>
+                <br>
+                <h3>Introduction to Computer Science<span style="font-weight: normal;">, Harvard University</span></h3>
+                <p><i>2023</i></p>
+                <p><b>Technology Used: </b>C, SQL, Python, HTML/CSS, Javascript, Flask</p>
+            </mat-tab>
+        </mat-tab-group>
     </div>
 </div>
