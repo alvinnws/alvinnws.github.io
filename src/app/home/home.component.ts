@@ -4,8 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
-import { octMarkGithub } from '@ng-icons/octicons';
-import { bootstrapLinkedin } from '@ng-icons/bootstrap-icons';
+import { bootstrapLinkedin, bootstrapGithub, bootstrapDownload } from '@ng-icons/bootstrap-icons';
 import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
@@ -14,7 +13,7 @@ import { MatTabsModule } from '@angular/material/tabs';
   imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatTabsModule, MatMenuModule, MatIconModule, NgIconComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  viewProviders: [provideIcons({octMarkGithub, bootstrapLinkedin})]
+  viewProviders: [provideIcons({bootstrapGithub, bootstrapLinkedin, bootstrapDownload})]
 })
 
 export class HomeComponent {
@@ -37,7 +36,7 @@ export class HomeComponent {
 
   @HostListener('window:scroll', [])
   onScroll() {
-    let e = document.querySelector('#menu') as HTMLElement;
+    let e = document.querySelector('#menu-bg') as HTMLElement;
     console.log(document.documentElement.clientHeight, window.scrollY);
     if (window.scrollY < document.documentElement.clientHeight * 0.19 - 40) {
       let p = (window.scrollY+40)/(document.documentElement.clientHeight*0.19)
