@@ -1,8 +1,11 @@
 <div id="bg" >
     <div id="menu-bg">
         <div id="menu">
-            <button mat-button [mat-menu-trigger-for]="menu" style="margin: 1px auto 0px 2px;"><mat-icon>menu</mat-icon>Menu</button>
-            <ng-icon (click)="goGithub()"   style="margin: 10px 7px 0px 0px; scale: 1.5; cursor: pointer;" name="bootstrapGithub"></ng-icon>
+            <div style="margin-right:auto">
+                <button mat-button disabled routerLink="/" routerLinkActive="active">Projects</button>
+                <button mat-button disabled routerLink="/" routerLinkActive="active">Blog</button>
+                <button mat-button routerLink="/contact-me" routerLinkActive="active">Contact</button>
+            </div><ng-icon (click)="goGithub()"   style="margin: 10px 7px 0px 0px; scale: 1.5; cursor: pointer;" name="bootstrapGithub"></ng-icon>
             <ng-icon (click)="goLinkedIn()" style="margin: 10px 0px 0px 7px; scale: 1.5; cursor: pointer;" name="bootstrapLinkedin"></ng-icon>
             <mat-menu #menu class="test">
                 <a mat-menu-item class="test">Projects</a>
@@ -35,15 +38,26 @@
                 <h3>Project Engineer Intern<span style="font-weight: normal;">, MLS Logistic Services</span></h3>
                 <p><i>May 2024 - Aug 2024</i></p>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Revamped automation that resulted in 20x increase in efficiency, clearing a 3 month backlog in one week</li>
+                    <li>Enhanced processes for inventory accounting workflow, reducing time taken and increasing accuracy</li>
+                    <li>Created an automated feedback system, allowing relevant departments to take action where necessary</li>
                 </ul>
                 <p><b>Software Used:</b> UiPath, Microsoft Power Platform (Power BI, Power Automate and Power Apps)</p>
                 <p>I specialised in creating automations to improve efficiency in workflows. My work challenged me as not only did I need to ideate and create these automations, I also had to cater them to a less tech-savvy audience.</p>
                 <p>An emphasis was placed in ensuring my solutions could be maintained by the users. This meant that I had to simplify my work to a large extent, including foreseeing potential adjustments that needed to be made, and teaching the basics of the program.</p>
+                <br><hr>
+                <h3>Undergradute Researcher<span style="font-weight: normal;">, Singapore University of Technology and Design</span></h3>
+                <p><i>Jan 2024 - June 2024</i></p>
+                <ul>
+                    <li>Developed a Python package to provide type hints for beginners</li>
+                    <li>Created a VSCode extension to integrate the Python package with VSCode's functionalities</li>
+                </ul>
+                <p><b>Software Used:</b> Python, Typescript</p>
+                <p></p>
+                <p></p>
                 <!-- TEMPLATE -->
                 <div style="display:none">
+                    <br><hr>
                     <h3>TITLE<span style="font-weight: normal;">, COMPANY</span></h3>
                     <p><i>START - END</i></p>
                     <ul>
@@ -58,7 +72,7 @@
             </mat-tab>
             <mat-tab label="Projects">
                 <h3>Resume Website</h3>
-                <p>HTML/CSS, Javascript, Angular | <a href="https://github.com/alvinnws/alvinnws.github.io" class="link" target="_blank" rel="noopener noreferrer">Repository</a></p>
+                <p>HTML/CSS, Typescript, Angular | <a href="https://github.com/alvinnws/alvinnws.github.io" class="link" target="_blank" rel="noopener noreferrer">Repository</a></p>
                 <p>This project serves several purposes, including a place for me to learn more about HTML/CSS, Javascript and the use of frameworks like Angular. Additionally, the website can serve to host records of my life, whether professoinal or personal. I intend to continue to work on the website, beginning a section for a blog, as well as subpages to detail any larger projects I embark on in the future.</p>
                 <p></p>
                 <!-- TEMPLATE -->
@@ -69,6 +83,9 @@
             <mat-tab label="Education">
                 <h3>Singapore University of Technology and Design</h3>
                 <p>Bachelor of Engineering (Computer Science and Design) | Jan 2024 - May 2028 (expected)</p>
+                <ul>
+                    <li>SUTD Global Distinguished Scholarship</li>
+                </ul>
                 <p>Strictly speaking, I'm intending to major in CSD, as the first 1.5 years of the syllabus are common across all offered programmes.</p>
                 <br><hr>
                 <h3>Anderson Serangoon Junior College</h3>
