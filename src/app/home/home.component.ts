@@ -20,14 +20,14 @@ import { MatTabsModule } from '@angular/material/tabs';
 export class HomeComponent {
   //rgba(210,177,255,1) 0%, rgba(252,199,255,1) 19%, rgba(255,186,173,1) 100%
   c1: { red:number, green:number, blue:number }= {
-    red: 210,
-    green: 177,
-    blue: 255
+    red: 254,
+    green: 151,
+    blue: 163
     };
   c2: { red:number, green:number, blue:number }= {
-    red: 252,
-    green: 199,
-    blue: 255
+    red: 255,
+    green: 186,
+    blue: 173
     };
   c3: { red:number, green:number, blue:number }= {
     red: 253,
@@ -39,7 +39,11 @@ export class HomeComponent {
   onScroll() {
     let e = document.querySelector('#menu-bg') as HTMLElement;
     console.log(document.documentElement.clientHeight, window.scrollY);
-    if (window.scrollY < document.documentElement.clientHeight * 0.19 - 40) {
+    if (window.scrollY < 0) {
+      let p = (40)/(document.documentElement.clientHeight*0.19)
+      let newc = this.calcRGB(this.c1, this.c2, p);
+      e.style.backgroundColor = this.cToRGBA(newc);
+    } else if (window.scrollY < document.documentElement.clientHeight * 0.19 - 40) {
       let p = (window.scrollY+40)/(document.documentElement.clientHeight*0.19)
       let newc = this.calcRGB(this.c1, this.c2, p);
       e.style.backgroundColor = this.cToRGBA(newc);
