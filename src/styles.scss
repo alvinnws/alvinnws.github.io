@@ -33,9 +33,9 @@ $portfolio-theme: mat.m2-define-light-theme((
 #mainbody {
     margin: 0px;
     height: 100%;
+    background-color: rgba(253,238,235,1);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: linear-gradient(#ffe8e8, #f1ca91);
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

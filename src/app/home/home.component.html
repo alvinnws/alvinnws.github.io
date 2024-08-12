@@ -2,7 +2,6 @@
     <div id="menu-bg">
         <div id="menu">
             <div style="margin-right:auto">
-                <button mat-button disabled routerLink="/" routerLinkActive="active">Projects</button>
                 <button mat-button disabled routerLink="/" routerLinkActive="active">Blog</button>
                 <button mat-button routerLink="/contact-me" routerLinkActive="active">Contact</button>
             </div>
@@ -33,7 +32,7 @@
     </div>
     <div id="body">
         <div style="display: flex; justify-content: center;">
-            <a href="/assets/Aug-2024.pdf"><button mat-stroked-button><ng-icon name="bootstrapDownload"></ng-icon> View my resume</button></a>
+            <a href="/assets/Aug-2024.pdf" target="_blank" rel="noopener noreferrer"><button mat-stroked-button><ng-icon name="bootstrapDownload"></ng-icon> View my resume</button></a>
         </div>
         <br>
         <mat-tab-group [color]="'warn'">
