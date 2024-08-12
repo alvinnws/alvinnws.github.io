@@ -5,8 +5,11 @@
                 <button mat-button disabled routerLink="/" routerLinkActive="active">Projects</button>
                 <button mat-button disabled routerLink="/" routerLinkActive="active">Blog</button>
                 <button mat-button routerLink="/contact-me" routerLinkActive="active">Contact</button>
-            </div><ng-icon (click)="goGithub()"   style="margin: 10px 7px 0px 0px; scale: 1.5; cursor: pointer;" name="bootstrapGithub"></ng-icon>
-            <ng-icon (click)="goLinkedIn()" style="margin: 10px 0px 0px 7px; scale: 1.5; cursor: pointer;" name="bootstrapLinkedin"></ng-icon>
+            </div>
+            
+            <div style="margin: 10px 7px 0px 7px"><ng-icon (click)="goGithub()"   style="scale: 1.5; cursor: pointer;" name="bootstrapGithub"></ng-icon></div>
+            <div style="margin: 10px 7px 0px 7px"><ng-icon (click)="goLinkedIn()" style="scale: 1.5; cursor: pointer;" name="bootstrapLinkedin"></ng-icon></div>
+            <div style="margin: 10px 7px 0px 7px"><ng-icon (click)="goEmail()" style="scale: 1.8; cursor: pointer;" name="matEmailOutline"></ng-icon></div>
             <mat-menu #menu class="test">
                 <a mat-menu-item class="test">Projects</a>
                 <a mat-menu-item>Resume</a>
