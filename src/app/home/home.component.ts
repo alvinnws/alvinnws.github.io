@@ -18,7 +18,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 })
 
 export class HomeComponent {
-  //rgba(210,177,255,1) 0%, rgba(252,199,255,1) 19%, rgba(255,186,173,1) 100%
   c1: { red:number, green:number, blue:number }= {
     red: 254,
     green: 151,
@@ -38,7 +37,6 @@ export class HomeComponent {
   @HostListener('window:scroll', [])
   onScroll() {
     let e = document.querySelector('#menu-bg') as HTMLElement;
-    console.log(document.documentElement.clientHeight, window.scrollY);
     if (window.scrollY < 0) {
       let p = (40)/(document.documentElement.clientHeight*0.19)
       let newc = this.calcRGB(this.c1, this.c2, p);
@@ -78,17 +76,5 @@ export class HomeComponent {
     st += String(c.green) + ',';
     st += String(c.blue) + ',1)';
     return st;
-  }
-
-  goGithub() {
-    window.location.href='https://www.github.com/alvinnws'
-  }
-
-  goLinkedIn() {
-    window.location.href='https://www.linkedin.com/in/alvinnws'
-  }
-
-  goEmail() {
-    window.location.href='mailto:official@alvinnws.com'
   }
 }
