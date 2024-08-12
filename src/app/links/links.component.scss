@@ -19,7 +19,9 @@ svg {
 }
 
 #bg {
-    background-image: linear-gradient(#ffe8e8, #f1ca91);
+    background-color: rgba(253,238,235,1);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     height: 100%;
