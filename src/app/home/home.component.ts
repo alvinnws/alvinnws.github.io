@@ -5,6 +5,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { bootstrapLinkedin, bootstrapGithub, bootstrapDownload } from '@ng-icons/bootstrap-icons';
+import { matEmailOutline } from '@ng-icons/material-icons/outline'
 import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
@@ -13,7 +14,7 @@ import { MatTabsModule } from '@angular/material/tabs';
   imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatTabsModule, MatMenuModule, MatIconModule, NgIconComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  viewProviders: [provideIcons({bootstrapGithub, bootstrapLinkedin, bootstrapDownload})]
+  viewProviders: [provideIcons({bootstrapGithub, bootstrapLinkedin, bootstrapDownload, matEmailOutline})]
 })
 
 export class HomeComponent {
@@ -29,9 +30,9 @@ export class HomeComponent {
     blue: 255
     };
   c3: { red:number, green:number, blue:number }= {
-    red: 255,
-    green: 186,
-    blue: 173
+    red: 253,
+    green: 238,
+    blue: 235
     };
 
   @HostListener('window:scroll', [])
@@ -81,5 +82,9 @@ export class HomeComponent {
 
   goLinkedIn() {
     window.location.href='https://www.linkedin.com/in/alvinnws'
+  }
+
+  goEmail() {
+    window.location.href='mailto:official@alvinnws.com'
   }
 }
