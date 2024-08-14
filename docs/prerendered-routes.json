@@ -1,6 +1,8 @@
 {
   "routes": [
     "/",
+    "/blog",
+    "/blog/template",
     "/contact-me",
     "/links",
     "/minigames",
