@@ -8,7 +8,7 @@
             
             <div style="margin: 10px 7px 0px 7px"><a href="https://www.github.com/alvinnws" class="link" target="_blank" rel="noopener noreferrer"><ng-icon style="scale: 1.5;" name="bootstrapGithub"></ng-icon></a></div>
             <div style="margin: 10px 7px 0px 7px"><a href="https://www.linkedin.com/in/alvinnws" class="link" target="_blank" rel="noopener noreferrer"><ng-icon style="scale: 1.5; cursor: pointer;" name="bootstrapLinkedin"></ng-icon></a></div>
-            <div style="margin: 10px 7px 0px 7px"><a href="mailto:official@alvinnws.com" class="link" target="_blank" rel="noopener noreferrer"><ng-icon style="scale: 1.8; cursor: pointer;" name="matEmailOutline"></ng-icon></a></div>
+            <div style="margin: 10px 7px 0px 7px"><ng-icon style="scale: 1.8; cursor: pointer;" name="matEmailOutline" [cdkCopyToClipboard]="email" (click)="copied()"></ng-icon></div>
             <hr id="menu-divider">
         </div>
     </div>
