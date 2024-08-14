@@ -41,15 +41,15 @@ export class HomeComponent {
   onScroll() {
     let e = document.querySelector('#menu-bg') as HTMLElement;
     if (window.scrollY < 0) {
-      let p = (40)/(document.documentElement.clientHeight*0.19)
+      let p = (35)/(document.documentElement.clientHeight*0.19)
       let newc = this.calcRGB(this.c1, this.c2, p);
       e.style.backgroundColor = this.cToRGBA(newc);
-    } else if (window.scrollY < document.documentElement.clientHeight * 0.19 - 40) {
+    } else if (window.scrollY < document.documentElement.clientHeight * 0.19 - 35) {
       let p = (window.scrollY+40)/(document.documentElement.clientHeight*0.19)
       let newc = this.calcRGB(this.c1, this.c2, p);
       e.style.backgroundColor = this.cToRGBA(newc);
-    } else if (document.documentElement.clientHeight * 0.19 - 40<= window.scrollY && window.scrollY < document.documentElement.clientHeight - 40) {
-      let p = (window.scrollY - document.documentElement.clientHeight*0.19 + 40)/(document.documentElement.clientHeight*0.81) 
+    } else if (document.documentElement.clientHeight * 0.19 - 35<= window.scrollY && window.scrollY < document.documentElement.clientHeight - 40) {
+      let p = (window.scrollY - document.documentElement.clientHeight*0.19 + 35)/(document.documentElement.clientHeight*0.81) 
       let newc = this.calcRGB(this.c2, this.c3, p);
       e.style.backgroundColor = this.cToRGBA(newc);
     } else {

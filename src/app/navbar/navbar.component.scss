@@ -1,61 +1,37 @@
 @import '../../styles.scss';
 
-mat-toolbar {
-    height: 50px;
-    width: 100%;
-    margin: 0px;
+a {
+    color: black;
+}
+
+#menu-bg {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 -1px 4px 0px var(--shadow);
+    justify-content: center;
+    z-index: 1000;
     position: fixed;
-    top: 0;
-    background-color: white;
-    z-index: 2000 !important;
+    width: 100%;
+    height: 35px;
+    background-color: rgb(253,238,235);
 }
 
-div img {
-    margin:5px 0px 5px 0px;
-}
-
-#spacer {
-    width: 100px;
-}
-
-#logo {
-    width: 120px;
-    height: 50px;
-    text-align: center;
-    cursor: pointer;
-}
-
-#links {
-    width: 400px;
+#menu {
+    width: min(80%, 800px);
+    height: 35px;
+    position: fixed;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    z-index: 1000;
 }
 
-#mobile-menu {
-    display: none;
-}
-
-::ng-deep .mat-mdc-menu-submenu-icon {
-    visibility: hidden;
-    display: none;
+#menu-divider {
+    position: fixed; 
+    top: 35px; 
+    width: min(80%,800px);
+    margin: auto;
 }
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
-    #links {
-        display: none;
-    }
-    #mobile-menu {
-        display: inline;
-    }
-    #spacer {
-        width: 0px;
-    }
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
