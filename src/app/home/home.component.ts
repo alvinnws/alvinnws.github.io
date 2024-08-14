@@ -1,7 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { bootstrapLinkedin, bootstrapGithub, bootstrapDownload } from '@ng-icons/bootstrap-icons';
@@ -11,7 +10,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatTabsModule, MatMenuModule, MatIconModule, NgIconComponent],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatTabsModule, MatIconModule, NgIconComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   viewProviders: [provideIcons({bootstrapGithub, bootstrapLinkedin, bootstrapDownload, matEmailOutline})]
