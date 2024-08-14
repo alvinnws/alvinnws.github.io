@@ -1,38 +1,16 @@
 @if (this.location.path() != "/links" && this.location.path() != "") {
-    <mat-toolbar>
-        <div id="spacer"></div>
-        <div id="logo" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"><img src="../../assets/Banner120x40.png"></div>
-        <div id="links">
-            <a mat-button routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
-            <button mat-button disabled [matMenuTriggerFor]="about">About</button>
-            <button mat-button disabled [matMenuTriggerFor]="projects">Projects</button>
-            <button mat-button [matMenuTriggerFor]="minigames">Minigames</button>
-            <a mat-button routerLink="/contact-me" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
+    <div id="menu-bg">
+        <div id="menu">
+            <div style="margin-right:auto">
+                <button mat-button routerLink="/" routerLinkActive="active">Home</button>
+                <button mat-button disabled routerLink="/" routerLinkActive="active">Blog</button>
+                <button mat-button routerLink="/contact-me" routerLinkActive="active">Contact</button>
+            </div>
+            
+            <div style="margin: 10px 7px 0px 7px"><a href="https://www.github.com/alvinnws" class="link" target="_blank" rel="noopener noreferrer"><ng-icon style="scale: 1.5;" name="bootstrapGithub"></ng-icon></a></div>
+            <div style="margin: 10px 7px 0px 7px"><a href="https://www.linkedin.com/in/alvinnws" class="link" target="_blank" rel="noopener noreferrer"><ng-icon style="scale: 1.5; cursor: pointer;" name="bootstrapLinkedin"></ng-icon></a></div>
+            <div style="margin: 10px 7px 0px 7px"><ng-icon style="scale: 1.8; cursor: pointer;" name="matEmailOutline" [cdkCopyToClipboard]="email" (click)="copied()"></ng-icon></div>
+            <hr id="menu-divider">
         </div>
-        <div id="mobile-menu">
-            <button mat-button [matMenuTriggerFor]="mobile">
-            <mat-icon>menu</mat-icon> Menu
-            </button>
-        </div>
-        <mat-menu #mobile="matMenu">
-            <button mat-menu-item routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Home</button>
-            <button mat-menu-item disabled [matMenuTriggerFor]="about">About</button>
-            <button mat-menu-item disabled [matMenuTriggerFor]="projects">Projects</button>
-            <button mat-menu-item [matMenuTriggerFor]="minigames">Minigames</button>
-            <a mat-menu-item routerLink="/contact-me" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
-        </mat-menu>
-        <mat-menu #about="matMenu" xPosition="before">
-            <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Summary</a>
-            <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Work</a>
-            <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Education</a>
-        </mat-menu>
-        <mat-menu #projects="matMenu">
-            <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">TypeHint</a>
-            <a mat-menu-item routerLink="/wip" routerLinkActive="active" ariaCurrentWhenActive="page">Portfolio Website</a>
-        </mat-menu>
-        <mat-menu #minigames="matMenu">
-            <a mat-menu-item routerLink="/minigames/tic-tac-toe" routerLinkActive="active" ariaCurrentWhenActive="page">Tic-Tac-Toe</a>
-        </mat-menu>
-        <div id="spacer"></div>
-    </mat-toolbar>
+    </div>
 }
