@@ -4,7 +4,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTabsModule } from '@angular/material/tabs';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { bootstrapDownload, bootstrapGithub, bootstrapLinkedin } from '@ng-icons/bootstrap-icons';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { matEmailOutline } from '@ng-icons/material-icons/outline';
@@ -14,7 +13,7 @@ import { Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatTabsModule, MatIconModule, NgIconComponent, ClipboardModule],
+  imports: [MatButtonModule, MatTabsModule, MatIconModule, NgIconComponent, ClipboardModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   viewProviders: [provideIcons({bootstrapGithub, bootstrapLinkedin, bootstrapDownload, matEmailOutline})]
