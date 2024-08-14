@@ -5,12 +5,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { bootstrapLinkedin, bootstrapGithub, bootstrapDownload } from '@ng-icons/bootstrap-icons';
 import { matEmailOutline } from '@ng-icons/material-icons/outline'
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatTabsModule, MatIconModule, NgIconComponent],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatTabsModule, MatIconModule, NgIconComponent, ClipboardModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   viewProviders: [provideIcons({bootstrapGithub, bootstrapLinkedin, bootstrapDownload, matEmailOutline})]
@@ -32,6 +34,8 @@ export class HomeComponent {
     green: 238,
     blue: 235
     };
+  
+  email = "official@alvinnws.com"
 
   @HostListener('window:scroll', [])
   onScroll() {
@@ -75,5 +79,12 @@ export class HomeComponent {
     st += String(c.green) + ',';
     st += String(c.blue) + ',1)';
     return st;
+  }
+
+  constructor(private _snackBar: MatSnackBar) {}
+  copied() {
+    this._snackBar.open("Copied official@alvinnws.com", "Close", {
+      duration: 3000,
+    });
   }
 }
