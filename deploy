@@ -2,3 +2,5 @@ rm -rf ./docs/server
 mv ./docs/browser/* ./docs
 rm -r ./docs/browser
 echo "www.alvinnws.com" > docs/CNAME
+mv ./docs/assets/sitemap.xml ./docs/sitemap.xml
+mv ./docs/assets/robots.txt ./docs/robots.txt
