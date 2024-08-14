@@ -22,7 +22,11 @@ $portfolio-theme: mat.m2-define-light-theme((
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($portfolio-theme);
+@include mat.core-theme($portfolio-theme);
+@include mat.button-theme($portfolio-theme);
+@include mat.tabs-theme($portfolio-theme);
+@include mat.input-theme($portfolio-theme);
+@include mat.form-field-theme($portfolio-theme);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* You can add global styles to this file, and also import other style files */
 :root {
