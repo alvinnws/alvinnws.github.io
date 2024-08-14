@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blog',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './blog.component.scss'
 })
 export class BlogComponent {
+  constructor(private meta: Meta) {}
+  ngOnInit() {
+    this.meta.updateTag({ name: 'description', content: 'Directory of all blog posts by Alvin Ng' })
+  }
 
 }
