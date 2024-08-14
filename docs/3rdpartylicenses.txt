@@ -67,12 +67,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 --------------------------------------------------------------------------------
-Package: @ng-icons/core
+Package: @ng-icons/bootstrap-icons
 License: "MIT"
 
 
 --------------------------------------------------------------------------------
-Package: @ng-icons/bootstrap-icons
+Package: @ng-icons/core
 License: "MIT"
 
 
