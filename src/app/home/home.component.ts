@@ -8,6 +8,8 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { bootstrapDownload, bootstrapGithub, bootstrapLinkedin } from '@ng-icons/bootstrap-icons';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { matEmailOutline } from '@ng-icons/material-icons/outline';
+import { Meta } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-home',
@@ -81,7 +83,10 @@ export class HomeComponent {
     return st;
   }
 
-  constructor(private _snackBar: MatSnackBar) {}
+  constructor(private _snackBar: MatSnackBar, private meta: Meta) {}
+  ngOnInit() {
+    this.meta.updateTag({ name: 'description', content: 'Alvin Ng Wei Sing is a Computer Science undergraduate at Singapore University of Technology and Design.' })
+  }
   copied() {
     this._snackBar.open("Copied official@alvinnws.com", "Close", {
       duration: 3000,

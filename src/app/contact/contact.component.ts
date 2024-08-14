@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -12,6 +13,10 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  constructor(private meta: Meta) {}
+  ngOnInit() {
+    this.meta.updateTag({ name: 'description', content: 'List of contact information for Alvin Ng' })
+  }
   contact = '';
   message = '';
   data = '';
