@@ -4,15 +4,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTabsModule } from '@angular/material/tabs';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { bootstrapDownload, bootstrapGithub, bootstrapLinkedin } from '@ng-icons/bootstrap-icons';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { matEmailOutline } from '@ng-icons/material-icons/outline';
+import { Meta } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatButtonModule, MatTabsModule, MatIconModule, NgIconComponent, ClipboardModule],
+  imports: [MatButtonModule, MatTabsModule, MatIconModule, NgIconComponent, ClipboardModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   viewProviders: [provideIcons({bootstrapGithub, bootstrapLinkedin, bootstrapDownload, matEmailOutline})]
@@ -81,7 +82,10 @@ export class HomeComponent {
     return st;
   }
 
-  constructor(private _snackBar: MatSnackBar) {}
+  constructor(private _snackBar: MatSnackBar, private meta: Meta) {}
+  ngOnInit() {
+    this.meta.updateTag({ name: 'description', content: 'Alvin Ng Wei Sing is a Computer Science undergraduate at Singapore University of Technology and Design.' })
+  }
   copied() {
     this._snackBar.open("Copied official@alvinnws.com", "Close", {
       duration: 3000,

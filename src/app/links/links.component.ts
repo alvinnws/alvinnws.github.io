@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-links',
@@ -8,4 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './links.component.scss'
 })
 export class LinksComponent {
+  constructor(private meta: Meta) {}
+  ngOnInit() {
+    this.meta.updateTag({ name: 'description', content: 'Small site for key links of Alvin Ng or his online presence.' })
+  }
 }
