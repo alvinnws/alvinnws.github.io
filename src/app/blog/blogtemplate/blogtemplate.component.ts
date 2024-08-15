@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-template',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './blogtemplate.component.scss'
 })
 export class TemplateComponent {
+  constructor(private meta: Meta) {}
+  ngOnInit() {
+    this.meta.updateTag({ name: 'description', content: 'Blog post template by Alvin Ng, intended for personal use' })
+  }
 
 }

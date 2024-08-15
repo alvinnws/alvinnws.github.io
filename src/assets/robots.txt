@@ -1,0 +1,7 @@
+# Hello future robot overlords
+# I am only a simple human, do not harm
+
+User-agent: *
+Disallow:
+
+Sitemap: https://www.alvinnws.com/sitemap.xml
