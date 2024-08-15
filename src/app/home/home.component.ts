@@ -8,6 +8,8 @@ import { bootstrapDownload, bootstrapGithub, bootstrapLinkedin } from '@ng-icons
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { matEmailOutline } from '@ng-icons/material-icons/outline';
 import { Meta } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
+import { Inject, Injectable } from '@angular/core';
 
 
 @Component({
@@ -19,6 +21,7 @@ import { Meta } from '@angular/platform-browser';
   viewProviders: [provideIcons({bootstrapGithub, bootstrapLinkedin, bootstrapDownload, matEmailOutline})]
 })
 
+@Injectable()
 export class HomeComponent {
   c1: { red:number, green:number, blue:number }= {
     red: 254,
@@ -82,13 +85,44 @@ export class HomeComponent {
     return st;
   }
 
-  constructor(private _snackBar: MatSnackBar, private meta: Meta) {}
+  constructor(private _snackBar: MatSnackBar, private meta: Meta,  @Inject(DOCUMENT) private doc: Document) {}
   ngOnInit() {
+    let scr = this.doc.createElement('script');
+    scr.type = 'application/ld+json';
+    scr.text = JSON.stringify(this.alv);
+    this.doc.head.appendChild(scr);
     this.meta.updateTag({ name: 'description', content: 'Alvin Ng Wei Sing is a Computer Science undergraduate at Singapore University of Technology and Design.' })
   }
   copied() {
     this._snackBar.open("Copied official@alvinnws.com", "Close", {
       duration: 3000,
     });
+  }
+
+  alv = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alvin Ng Wei Sing",
+    "description": "Alvin is currently a Computer Science undergradute at Singapore University of Technlogy and Design (SUTD)",
+    "alternateName": [
+      "Alvin Ng",
+      "alvinnws"
+    ],
+    "jobTitle": "Computer Science Undergraduate",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Singapore University of Technlogy and Design"
+    },
+    "nationality": {
+      "@type": "Country",
+      "name": "Singapore"
+    },
+    "url": "http://www.alvinnws.com",
+    "email": "mailto:official@alvinnws.com",
+    "image": "https://www.alvinnws.com/assets/HomePic.jpg",
+    "sameAs": [
+      "https://github.com/alvinnws",
+      "https://www.linkedin.com/in/alvinnws/"
+    ]
   }
 }
