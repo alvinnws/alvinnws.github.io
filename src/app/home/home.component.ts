@@ -101,28 +101,34 @@ export class HomeComponent {
 
   alv = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Alvin Ng Wei Sing",
-    "description": "Alvin is currently a Computer Science undergradute at Singapore University of Technlogy and Design (SUTD)",
-    "alternateName": [
-      "Alvin Ng",
-      "alvinnws"
-    ],
-    "jobTitle": "Computer Science Undergraduate",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "Singapore University of Technlogy and Design"
-    },
-    "nationality": {
-      "@type": "Country",
-      "name": "Singapore"
-    },
-    "url": "http://www.alvinnws.com",
-    "email": "mailto:official@alvinnws.com",
-    "image": "https://www.alvinnws.com/assets/HomePic.jpg",
-    "sameAs": [
-      "https://github.com/alvinnws",
-      "https://www.linkedin.com/in/alvinnws/"
-    ]
+    "@type": "ProfilePage",
+    "dateCreated": "2024-08-15T16:45:00+08:00",
+    "dateModified": "2024-08-15T16:45:00+08:00",
+    "mainEntity": {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Alvin Ng Wei Sing",
+      "description": "Alvin is currently a Computer Science undergradute at Singapore University of Technlogy and Design (SUTD)",
+      "alternateName": [
+        "Alvin Ng",
+        "alvinnws"
+      ],
+      "jobTitle": "Computer Science Undergraduate",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Singapore University of Technlogy and Design"
+      },
+      "nationality": {
+        "@type": "Country",
+        "name": "Singapore"
+      },
+      "url": "http://www.alvinnws.com",
+      "email": "mailto:official@alvinnws.com",
+      "image": "https://www.alvinnws.com/assets/HomePic.jpg",
+      "sameAs": [
+        "https://github.com/alvinnws",
+        "https://www.linkedin.com/in/alvinnws/"
+      ]
+    }
   }
 }
