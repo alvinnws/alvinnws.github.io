@@ -8,8 +8,9 @@ import { bootstrapDownload, bootstrapGithub, bootstrapLinkedin } from '@ng-icons
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { matEmailOutline } from '@ng-icons/material-icons/outline';
 import { Meta } from '@angular/platform-browser';
+import { Renderer2 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable } from '@angular/core';
+import { Inject } from '@angular/core';
 
 
 @Component({
@@ -21,7 +22,6 @@ import { Inject, Injectable } from '@angular/core';
   viewProviders: [provideIcons({bootstrapGithub, bootstrapLinkedin, bootstrapDownload, matEmailOutline})]
 })
 
-@Injectable()
 export class HomeComponent {
   c1: { red:number, green:number, blue:number }= {
     red: 254,
@@ -85,21 +85,13 @@ export class HomeComponent {
     return st;
   }
 
-  constructor(private _snackBar: MatSnackBar, private meta: Meta,  @Inject(DOCUMENT) private doc: Document) {}
+  constructor(
+    private _snackBar: MatSnackBar, 
+    private meta: Meta,  
+    @Inject(DOCUMENT) private doc: Document,
+    private renderer: Renderer2) {}
   ngOnInit() {
-    let scr = this.doc.createElement('script');
-    scr.type = 'application/ld+json';
-    scr.text = JSON.stringify(this.alv);
-    this.doc.head.appendChild(scr);
-    this.meta.updateTag({ name: 'description', content: 'Alvin Ng Wei Sing is a Computer Science undergraduate at Singapore University of Technology and Design.' })
-  }
-  copied() {
-    this._snackBar.open("Copied official@alvinnws.com", "Close", {
-      duration: 3000,
-    });
-  }
-
-  alv = {
+    const alv = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
     "dateCreated": "2024-08-15T16:45:00+08:00",
@@ -131,4 +123,18 @@ export class HomeComponent {
       ]
     }
   }
+    let scr = this.renderer.createElement('script');
+    scr.type = 'application/ld+json';
+    scr.text = JSON.stringify(alv);
+    scr.id = 'unique-script-id';
+    if (!this.doc.getElementById('unique-script-id')) {this.renderer.appendChild(this.doc.head, scr);}
+    this.meta.updateTag({ name: 'description', content: 'Alvin Ng Wei Sing is a Computer Science undergraduate at Singapore University of Technology and Design.' })
+  }
+  copied() {
+    this._snackBar.open("Copied official@alvinnws.com", "Close", {
+      duration: 3000,
+    });
+  }
+
+  
 }
