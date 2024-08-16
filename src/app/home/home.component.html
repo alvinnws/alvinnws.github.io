@@ -5,9 +5,8 @@
                 <a href="/blog"><button mat-button>Blog</button></a>
                 <a href="/contact-me"><button mat-button>Contact</button></a>
             </div>
-            
-            <div style="margin: 10px 7px 0px 7px"><a href="https://www.github.com/alvinnws" class="link" target="_blank" rel="noopener noreferrer"><ng-icon style="scale: 1.5;" name="bootstrapGithub"></ng-icon></a></div>
-            <div style="margin: 10px 7px 0px 7px"><a href="https://www.linkedin.com/in/alvinnws" class="link" target="_blank" rel="noopener noreferrer"><ng-icon style="scale: 1.5; cursor: pointer;" name="bootstrapLinkedin"></ng-icon></a></div>
+            <div style="margin: 10px 7px 0px 7px"><a href="https://www.github.com/alvinnws" title="Alvin's Github"  target="_blank" rel="noopener noreferrer"><ng-icon style="scale: 1.5;" name="bootstrapGithub"></ng-icon></a></div>
+            <div style="margin: 10px 7px 0px 7px"><a href="https://www.linkedin.com/in/alvinnws" title="Alvin's LinkedIn"  target="_blank" rel="noopener noreferrer"><ng-icon style="scale: 1.5; cursor: pointer;" name="bootstrapLinkedin"></ng-icon></a></div>
             <div style="margin: 10px 7px 0px 7px"><ng-icon style="scale: 1.8; cursor: pointer;" name="matEmailOutline" [cdkCopyToClipboard]="email" (click)="copied()"></ng-icon></div>
             <hr id="menu-divider">
         </div>
@@ -27,234 +26,95 @@
         </div>
     </div>
     <div id="body">
-        <div style="display: flex; justify-content: center;">
+        <div class="center">
             <a href="/assets/Resume.pdf" target="_blank" rel="noopener noreferrer"><button mat-stroked-button><ng-icon name="bootstrapDownload"></ng-icon> View my resume</button></a>
         </div>
         <br>
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>Work</mat-panel-title>
-                </mat-expansion-panel-header>
-                <h2>Project Engineer Intern<span style="font-weight: normal;">, MLS Logistic Services</span></h2>
+        <div id="sectA">
+            <div id="content">
+                <h2>Work experience</h2>
+                <h3>Project Engineer Intern<span style="font-weight: normal;">, MLS Logistic Services</span></h3>
                 <p><i>May 2024 - Aug 2024</i></p>
+                <p><b>Software Used:</b> UiPath, Microsoft Power Platform (Power BI, Power Automate and Power Apps)</p>
                 <ul>
                     <li>Revamped automation that resulted in 20x increase in efficiency, clearing a 3 month backlog in one week</li>
                     <li>Enhanced processes for inventory accounting workflow, reducing time taken and increasing accuracy</li>
                     <li>Created an automated feedback system, allowing relevant departments to take action where necessary</li>
-                </ul>
-                <p><b>Software Used:</b> UiPath, Microsoft Power Platform (Power BI, Power Automate and Power Apps)</p>
-                <p>I specialised in creating automations to improve efficiency in workflows. My work challenged me as not only did I need to ideate and create these automations, I also had to cater them to a less tech-savvy audience.</p>
-                <p>An emphasis was placed in ensuring my solutions could be maintained by the users. This meant that I had to simplify my work to a large extent, including foreseeing potential adjustments that needed to be made, and teaching the basics of the program.</p>
-                <br><hr>
-                <h2>Undergradute Researcher<span style="font-weight: normal;">, Singapore University of Technology and Design</span></h2>
+                </ul><br>
+                <h3>Undergradute Researcher<span style="font-weight: normal;">, Singapore University of Technology and Design</span></h3>
                 <p><i>Jan 2024 - June 2024</i></p>
+                <p><b>Languages Used:</b> Python, Typescript</p>
                 <ul>
                     <li>Developed a Python package to provide type hints for beginners</li>
                     <li>Created a VSCode extension to integrate the Python package with VSCode's functionalities</li>
                 </ul>
-                <p><b>Languages Used:</b> Python, Typescript</p>
-                <p>Under the guidance of Dr. Oka Kurniawan, I created the Python package and VSCode Extension with the aim of reducing the learning curve to data types in Python. Taking on this project was a wonderful learning experience for myself as I got a deeper understanding of the development workflow and gained experience in creating these packages from scratch.</p>
-                <p></p>
-                <!-- TEMPLATE -->
-                <div style="display:none">
-                    <br><hr>
-                    <h2>TITLE<span style="font-weight: normal;">, COMPANY</span></h2>
-                    <p><i>START - END</i></p>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <p><b>Software Used:</b> </p>
-                    <p></p>
-                    <p></p>
+                <div class="center">
+                    <a href="/work-experience"  target="_blank" rel="noopener noreferrer"><button mat-stroked-button>View full professional history</button></a>
                 </div>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Projects
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <h2>Resume Website</h2>
-                <p>HTML/CSS, Typescript, Angular, Git | <a href="https://github.com/alvinnws/alvinnws.github.io" class="link" target="_blank" rel="noopener noreferrer">Repository</a></p>
-                <p>This project serves several purposes, including a place for me to learn more about HTML/CSS, Javascript and the use of frameworks like <a href="https://angular.dev/" class="link" target="_blank" rel="noopener noreferrer">Angular</a>. Additionally, the website can serve to host records of my life, whether professoinal or personal. I intend to continue to work on the website, beginning a section for a blog, as well as subpages to detail any larger projects I embark on in the future.</p>
-                <p></p>
-                <br><hr>
-                <h2>Advent Of Code 2023</h2>
-                <p>Python | <a href="https://github.com/alvinnws/advent-of-code/tree/main/2023" class="link" target="_blank" rel="noopener noreferrer">Repository</a></p>
-                <p>I tackled and completed the <a href="https://adventofcode.com/" class="link" target="_blank" rel="noopener noreferrer">annual programming challenge</a> posed by Eric Wastl, which saw >300k attempts in 2023, but only ~11k finishers. However, I only attempted it after discovering it in June 2024, which is basically the opposite of christmas vibes for most people. </p>
-                <p>I gained a fair amout of experience from the challenges, from applying various concepts such as flood-fill and graph algorithms to learning incredibly niche concepts such as <a class="link" style="font-weight: normal" href="https://en.wikipedia.org/wiki/Pick%27s_theorem" target="_blank" rel="noopener noreferrer">Pick's Theorem</a></p>
-                <br><hr>
-                <h2>Line Sticker Downloader</h2>
-                <p>Python | <a href="https://github.com/alvinnws/Line-Sticker-Downloader" class="link" target="_blank" rel="noopener noreferrer">Repository</a></p>
-                <p>This was my first ever program written outside of any tutorials/lessons/etc. Short and simple, it served only one purpose which was to take in the link of a Line stickerpack and scrape the images.</p>
-                <p>Looking back, there is a lot of improvements to be made, but it served its purpose at the time and I saved significantly more time using this than manually downloading everything, which was good enough.</p>
-                <!-- TEMPLATE -->
-                <div style="display:none">
-                    <br><hr>
-                    <h2>TITLE</h2>
-                    <p>TECH | <a href="" class="link" target="_blank" rel="noopener noreferrer">Repository</a></p>
-                    <p></p>
-                    <p></p>
+                <br>
+            </div>
+        </div>
+        <div id="sectB">
+            <div id="content">
+                <h2>Latest Projects</h2>
+                <h3>Resume Website</h3>
+                <p>HTML/CSS, Typescript, Angular, Git | <a href="https://github.com/alvinnws/alvinnws.github.io"  target="_blank" rel="noopener noreferrer">Repository</a></p>
+                <p>Built a website using Angular for both professional and personal use.</p>
+                <br>
+                <h3>Advent Of Code 2023</h3>
+                <p>Python | <a href="https://github.com/alvinnws/advent-of-code/tree/main/2023"  target="_blank" rel="noopener noreferrer">Repository</a></p>
+                <p>I tackled and completed the <a href="https://adventofcode.com/"  target="_blank" rel="noopener noreferrer">annual programming challenge</a> posed by Eric Wastl, which saw >300k attempts in 2023, but only ~11k finishers. However, I only attempted it after discovering it in June 2024, which is basically the opposite of christmas vibes for most people. </p>
+                <p>I gained a fair amout of experience from the challenges, from applying various concepts such as flood-fill and graph algorithms to learning incredibly niche concepts such as <a  style="font-weight: normal" href="https://en.wikipedia.org/wiki/Pick%27s_theorem" target="_blank" rel="noopener noreferrer">Pick's Theorem</a></p>
+                <br>
+                <div class="center">
+                    <a href="/projects"  target="_blank" rel="noopener noreferrer"><button mat-stroked-button>View all projects</button></a>
                 </div>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Education
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <h2>Singapore University of Technology and Design</h2>
+                <br>
+            </div>
+        </div>
+        <div id="sectA">
+            <div id="content">
+                <h2>Education</h2>
+                <h3>Singapore University of Technology and Design</h3>
                 <p>Bachelor of Engineering (Computer Science and Design) | Jan 2024 - May 2028 (expected)</p>
                 <ul>
-                    <li>SUTD Global Distinguished Scholarship (<a href="https://www.sutd.edu.sg/Admissions/Undergraduate/Scholarship/SUTD-Global-Distinguished-Scholarship" class="link" target="_blank" rel="noopener noreferrer">Info</a>)</li>
+                    <li>SUTD Global Distinguished Scholarship (<a href="https://www.sutd.edu.sg/Admissions/Undergraduate/Scholarship/SUTD-Global-Distinguished-Scholarship"  target="_blank" rel="noopener noreferrer">Info</a>)</li>
                 </ul>
-                <p>Strictly speaking, I'm intending to major in CSD, as the first 1.5 years of the syllabus are common across all offered programmes.</p>
-                <br><hr>
-                <h2>Anderson Serangoon Junior College</h2>
-                <p>GCE 'A' Levels | Feb 2020 - Dec 2021</p>
-                <ul>
-                    <li>Graduated top 5% of the cohort</li>
-                    <li>ASRJC Alpha Scholars Programme (<a href="https://www.asrjc.moe.edu.sg/asrjc-experience/special-programmes/talentdev/" class="link" target="_blank" rel="noopener noreferrer">Info</a>)</li>
-                    <li>Artemis House Vice-Captain</li>
-                </ul>
-                <p>Despite entering JC through the start of the pandemic and through the peak of Singapore's Safe Management Measures (SMM), I found my time in ASR to be fulfilling and I enjoyed the 2 years. It was a privilege to serve as the Vice-Captain of Artemis, through which I led the College Ambassadors in the leadup and during Orientation 2021. We built fond memories together in spite of the difficulties posed by SMMs.</p>
-                <p>Beyond my duties as a House Vice-Captain and Student Councillor, I contributed to various events such as ASR's Rejuvenation Week and Earth Week in 2021, aiming to contribute back to my community and raise awareness for social issues. I also participated in external competitions such as the Singapore Mathematical Olympiad and <a href="https://www.nasa.gov/general/nasas-lunar-loo-challenge/" class="link" target="_blank" rel="noopener noreferrer">NASA's Lunar Loo Challenge</a>.</p>
-                <p>I was fortunate to have built a strong support system that enabled me to perform my best for the 2021 GCE 'A' Levels.</p>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Certificates
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <h2>Data Analytics<span style="font-weight: normal;">, Google</span></h2>
-                <p>2024 | R, SQL, Tableau | <a href="https://coursera.org/verify/professional-cert/95E93PQFBP8N" class="link" target="_blank" rel="noopener noreferrer">Certificate</a></p>
-                <p>I took this course looking to get a practical understanding and approach to data analytics. I found that I had previously learnt a somewhat significant amount of the content, namely the skills towards Microsoft Excel/Google Sheets and SQL. I'm not bothered as this course is meant to be introductory and should not assume such knowledge in all learners. That being said, I still found the course informative in the data analytic workflow (Ask, Prepare, Process, Analyse, Share, Act) and to pick up Tableau and R as skills.</p>
-                <p>I would recommend this course if you have little to no knowledge in the items metioned above, as it can feel boring to go over material you already have a grasp on.</p>
-                <br><hr>
-                <h2>Introduction to Artificial Intelligence<span style="font-weight: normal;">, Harvard University</span></h2>
-                <p>2024 | Python, Tensorflow, Natural Language Toolkit | <a href="https://cs50.harvard.edu/certificates/b6b77633-6f2b-4d8a-8e8e-ff1d13e6e791" class="link" target="_blank" rel="noopener noreferrer">Certificate</a></p>
-                <p>Building on the Python I learnt from CS50x, I learnt about Artificial Intelligence (AI) fundementals. This included concepts such as graph searching, minmax, optimisation, machine learning and more. The assignments were practical and showed the uses of AI in various situations, from games to data processing and even sentiment analysis.</p>
-                <p>My favourite aspect was how they related concepts to practical applications, from neural networks/language processing with ChatGPT, optimisation with AI in games, to ranking heuristics (PageRank algorithm) with Google Search.</p>
-                <br><hr>
-                <h2>Introduction to Computer Science<span style="font-weight: normal;">, Harvard University</span></h2>
-                <p>2023 | C, SQL, Python, HTML/CSS, Javascript, Flask  | <a href="https://cs50.harvard.edu/certificates/d7fcb233-ffcc-4b68-84a0-8c56e1b2dbb8" class="link" target="_blank" rel="noopener noreferrer">Certificate</a></p>
-                <p>This course helped me build a strong foundation in computer science fundementals. Taught by Prof David Malan, I found the lectures to be engaging and insightful. The lectures, notes and assignments were all exactly as one would receive taking this course at Harvard. The course provided a broad overview of concepts such as memory management, algorithms, databases and web development.</p>
-                <p>I'm glad to have taken this course, and would recommend it to anyone looking to get into computer science.</p>
-                <!-- TEMPLATE -->
-                <div style="display: none"> 
-                    <br>
-                    <h2>NAME<span style="font-weight: normal;">, ISSUER</span></h2>
-                    <p>YEAR | TECH | <a href="" class="link" target="_blank" rel="noopener noreferrer">Certificate</a></p>
-                    <p></p>
+                <br>
+                <div class="center">
+                    <a href="/education"  target="_blank" rel="noopener noreferrer"><button mat-stroked-button>View full coursework and education history</button></a>
                 </div>
-            </mat-expansion-panel>
-        </mat-accordion>
+                <br>
+            </div>
+        </div>
+        <div id="sectB">
+            <div id="content">
+                <h2>Certificates</h2>
+                <h3>Data Analytics<span style="font-weight: normal;">, Google</span></h3>
+                <p>2024 | R, SQL, Tableau | <a href="https://coursera.org/verify/professional-cert/95E93PQFBP8N"  target="_blank" rel="noopener noreferrer">Certificate</a> | <a href="https://grow.google/certificates/data-analytics/" target="_blank" rel="noopener noreferrer">Course website</a></p>
+                <p>This course covered the basics of Data Analytics, including the data lifecycle and workflow, and taught various R, SQL, Tableau, and various spreadsheet functions.</p>
+                <br>
+                <h3>Introduction to Artificial Intelligence<span style="font-weight: normal;">, Harvard University</span></h3>
+                <p>2024 | Python, Tensorflow, Natural Language Toolkit | <a href="https://cs50.harvard.edu/certificates/b6b77633-6f2b-4d8a-8e8e-ff1d13e6e791"  target="_blank" rel="noopener noreferrer">Certificate</a> | <a href="https://cs50.harvard.edu/ai/" target="_blank" rel="noopener noreferrer">Course website</a></p>
+                <p>This course covered the fundementals of Artificial Intelligence, from basic statistics and algorithms, up to neural networks and natural language processing. It was taught entirely using Python but used various libraries to accomplish its goals, including Tensorflow, Scikit-learn and Natural Language Toolkit.</p>
+                <br>
+                <h3>Introduction to Computer Science<span style="font-weight: normal;">, Harvard University</span></h3>
+                <p>2023 | C, SQL, Python, HTML/CSS, Javascript, Flask  | <a href="https://cs50.harvard.edu/certificates/d7fcb233-ffcc-4b68-84a0-8c56e1b2dbb8"  target="_blank" rel="noopener noreferrer">Certificate</a> | <a href="https://cs50.harvard.edu/x/" target="_blank" rel="noopener noreferrer">Course website</a></p>
+                <p>This course covered computer science fundementals across multiple languages, focused on building problem solving and strong computational thinking skills, and taught basic web devleopment tools.</p>
+                <div class="center">
+                    <a href="/certificates"  target="_blank" rel="noopener noreferrer"><button mat-stroked-button>View all certificates</button></a>
+                </div>
+                <br>
+            </div>
+        </div>
+        <!--TO BE MOVED TO SEPARATE SITES-->
         <mat-tab-group [color]="'warn'" style="display:none">
             <mat-tab label="Work">
-                <h2>Project Engineer Intern<span style="font-weight: normal;">, MLS Logistic Services</span></h2>
-                <p><i>May 2024 - Aug 2024</i></p>
-                <ul>
-                    <li>Revamped automation that resulted in 20x increase in efficiency, clearing a 3 month backlog in one week</li>
-                    <li>Enhanced processes for inventory accounting workflow, reducing time taken and increasing accuracy</li>
-                    <li>Created an automated feedback system, allowing relevant departments to take action where necessary</li>
-                </ul>
-                <p><b>Software Used:</b> UiPath, Microsoft Power Platform (Power BI, Power Automate and Power Apps)</p>
-                <p>I specialised in creating automations to improve efficiency in workflows. My work challenged me as not only did I need to ideate and create these automations, I also had to cater them to a less tech-savvy audience.</p>
-                <p>An emphasis was placed in ensuring my solutions could be maintained by the users. This meant that I had to simplify my work to a large extent, including foreseeing potential adjustments that needed to be made, and teaching the basics of the program.</p>
-                <br><hr>
-                <h2>Undergradute Researcher<span style="font-weight: normal;">, Singapore University of Technology and Design</span></h2>
-                <p><i>Jan 2024 - June 2024</i></p>
-                <ul>
-                    <li>Developed a Python package to provide type hints for beginners</li>
-                    <li>Created a VSCode extension to integrate the Python package with VSCode's functionalities</li>
-                </ul>
-                <p><b>Languages Used:</b> Python, Typescript</p>
-                <p>Under the guidance of Dr. Oka Kurniawan, I created the Python package and VSCode Extension with the aim of reducing the learning curve to data types in Python. Taking on this project was a wonderful learning experience for myself as I got a deeper understanding of the development workflow and gained experience in creating these packages from scratch.</p>
-                <p></p>
-                <!-- TEMPLATE -->
-                <div style="display:none">
-                    <br><hr>
-                    <h2>TITLE<span style="font-weight: normal;">, COMPANY</span></h2>
-                    <p><i>START - END</i></p>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <p><b>Software Used:</b> </p>
-                    <p></p>
-                    <p></p>
-                </div>
             </mat-tab>
             <mat-tab label="Projects">
-                <h2>Resume Website</h2>
-                <p>HTML/CSS, Typescript, Angular, Git | <a href="https://github.com/alvinnws/alvinnws.github.io" class="link" target="_blank" rel="noopener noreferrer">Repository</a></p>
-                <p>This project serves several purposes, including a place for me to learn more about HTML/CSS, Javascript and the use of frameworks like <a href="https://angular.dev/" class="link" target="_blank" rel="noopener noreferrer">Angular</a>. Additionally, the website can serve to host records of my life, whether professoinal or personal. I intend to continue to work on the website, beginning a section for a blog, as well as subpages to detail any larger projects I embark on in the future.</p>
-                <p></p>
-                <br><hr>
-                <h2>Advent Of Code 2023</h2>
-                <p>Python | <a href="https://github.com/alvinnws/advent-of-code/tree/main/2023" class="link" target="_blank" rel="noopener noreferrer">Repository</a></p>
-                <p>I tackled and completed the <a href="https://adventofcode.com/" class="link" target="_blank" rel="noopener noreferrer">annual programming challenge</a> posed by Eric Wastl, which saw >300k attempts in 2023, but only ~11k finishers. However, I only attempted it after discovering it in June 2024, which is basically the opposite of christmas vibes for most people. </p>
-                <p>I gained a fair amout of experience from the challenges, from applying various concepts such as flood-fill and graph algorithms to learning incredibly niche concepts such as <a class="link" style="font-weight: normal" href="https://en.wikipedia.org/wiki/Pick%27s_theorem" target="_blank" rel="noopener noreferrer">Pick's Theorem</a></p>
-                <br><hr>
-                <h2>Line Sticker Downloader</h2>
-                <p>Python | <a href="https://github.com/alvinnws/Line-Sticker-Downloader" class="link" target="_blank" rel="noopener noreferrer">Repository</a></p>
-                <p>This was my first ever program written outside of any tutorials/lessons/etc. Short and simple, it served only one purpose which was to take in the link of a Line stickerpack and scrape the images.</p>
-                <p>Looking back, there is a lot of improvements to be made, but it served its purpose at the time and I saved significantly more time using this than manually downloading everything, which was good enough.</p>
-                <!-- TEMPLATE -->
-                <div style="display:none">
-                    <br><hr>
-                    <h2>TITLE</h2>
-                    <p>TECH | <a href="" class="link" target="_blank" rel="noopener noreferrer">Repository</a></p>
-                    <p></p>
-                    <p></p>
-                </div>
             </mat-tab>
-            <mat-tab label="Education">
-                <h2>Singapore University of Technology and Design</h2>
-                <p>Bachelor of Engineering (Computer Science and Design) | Jan 2024 - May 2028 (expected)</p>
-                <ul>
-                    <li>SUTD Global Distinguished Scholarship (<a href="https://www.sutd.edu.sg/Admissions/Undergraduate/Scholarship/SUTD-Global-Distinguished-Scholarship" class="link" target="_blank" rel="noopener noreferrer">Info</a>)</li>
-                </ul>
-                <p>Strictly speaking, I'm intending to major in CSD, as the first 1.5 years of the syllabus are common across all offered programmes.</p>
-                <br><hr>
-                <h2>Anderson Serangoon Junior College</h2>
-                <p>GCE 'A' Levels | Feb 2020 - Dec 2021</p>
-                <ul>
-                    <li>Graduated top 5% of the cohort</li>
-                    <li>ASRJC Alpha Scholars Programme (<a href="https://www.asrjc.moe.edu.sg/asrjc-experience/special-programmes/talentdev/" class="link" target="_blank" rel="noopener noreferrer">Info</a>)</li>
-                    <li>Artemis House Vice-Captain</li>
-                </ul>
-                <p>Despite entering JC through the start of the pandemic and through the peak of Singapore's Safe Management Measures (SMM), I found my time in ASR to be fulfilling and I enjoyed the 2 years. It was a privilege to serve as the Vice-Captain of Artemis, through which I led the College Ambassadors in the leadup and during Orientation 2021. We built fond memories together in spite of the difficulties posed by SMMs.</p>
-                <p>Beyond my duties as a House Vice-Captain and Student Councillor, I contributed to various events such as ASR's Rejuvenation Week and Earth Week in 2021, aiming to contribute back to my community and raise awareness for social issues. I also participated in external competitions such as the Singapore Mathematical Olympiad and <a href="https://www.nasa.gov/general/nasas-lunar-loo-challenge/" class="link" target="_blank" rel="noopener noreferrer">NASA's Lunar Loo Challenge</a>.</p>
-                <p>I was fortunate to have built a strong support system that enabled me to perform my best for the 2021 GCE 'A' Levels.</p>
-            </mat-tab>
+            <mat-tab label="Education"></mat-tab>
             <mat-tab label="Certificates">
-                <h2>Data Analytics<span style="font-weight: normal;">, Google</span></h2>
-                <p>2024 | R, SQL, Tableau | <a href="https://coursera.org/verify/professional-cert/95E93PQFBP8N" class="link" target="_blank" rel="noopener noreferrer">Certificate</a></p>
-                <p>I took this course looking to get a practical understanding and approach to data analytics. I found that I had previously learnt a somewhat significant amount of the content, namely the skills towards Microsoft Excel/Google Sheets and SQL. I'm not bothered as this course is meant to be introductory and should not assume such knowledge in all learners. That being said, I still found the course informative in the data analytic workflow (Ask, Prepare, Process, Analyse, Share, Act) and to pick up Tableau and R as skills.</p>
-                <p>I would recommend this course if you have little to no knowledge in the items metioned above, as it can feel boring to go over material you already have a grasp on.</p>
-                <br><hr>
-                <h2>Introduction to Artificial Intelligence<span style="font-weight: normal;">, Harvard University</span></h2>
-                <p>2024 | Python, Tensorflow, Natural Language Toolkit | <a href="https://cs50.harvard.edu/certificates/b6b77633-6f2b-4d8a-8e8e-ff1d13e6e791" class="link" target="_blank" rel="noopener noreferrer">Certificate</a></p>
-                <p>Building on the Python I learnt from CS50x, I learnt about Artificial Intelligence (AI) fundementals. This included concepts such as graph searching, minmax, optimisation, machine learning and more. The assignments were practical and showed the uses of AI in various situations, from games to data processing and even sentiment analysis.</p>
-                <p>My favourite aspect was how they related concepts to practical applications, from neural networks/language processing with ChatGPT, optimisation with AI in games, to ranking heuristics (PageRank algorithm) with Google Search.</p>
-                <br><hr>
-                <h2>Introduction to Computer Science<span style="font-weight: normal;">, Harvard University</span></h2>
-                <p>2023 | C, SQL, Python, HTML/CSS, Javascript, Flask  | <a href="https://cs50.harvard.edu/certificates/d7fcb233-ffcc-4b68-84a0-8c56e1b2dbb8" class="link" target="_blank" rel="noopener noreferrer">Certificate</a></p>
-                <p>This course helped me build a strong foundation in computer science fundementals. Taught by Prof David Malan, I found the lectures to be engaging and insightful. The lectures, notes and assignments were all exactly as one would receive taking this course at Harvard. The course provided a broad overview of concepts such as memory management, algorithms, databases and web development.</p>
-                <p>I'm glad to have taken this course, and would recommend it to anyone looking to get into computer science.</p>
-                <!-- TEMPLATE -->
-                <div style="display: none"> 
-                    <br>
-                    <h2>NAME<span style="font-weight: normal;">, ISSUER</span></h2>
-                    <p>YEAR | TECH | <a href="" class="link" target="_blank" rel="noopener noreferrer">Certificate</a></p>
-                    <p></p>
-                </div>
             </mat-tab>
         </mat-tab-group>
     </div>
