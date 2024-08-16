@@ -96,13 +96,14 @@ export class HomeComponent {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
     "dateCreated": "2024-08-15T16:45:00+08:00",
-    "dateModified": "2024-08-15T16:45:00+08:00",
+    "dateModified": "2024-08-16T14:33:00+08:00",
     "mainEntity": {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Alvin Ng Wei Sing",
       "description": "Alvin is currently a Computer Science undergradute at Singapore University of Technlogy and Design (SUTD)",
       "alternateName": [
+        "Ng Wei Sing Alvin",
         "Alvin Ng",
         "alvinnws"
       ],
