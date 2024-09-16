@@ -11,6 +11,7 @@ import { WorkComponent } from './work/work.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { EducationComponent } from './education/education.component';
 import { CertificatesComponent } from './certificates/certificates.component';
+import { EduTemplateComponent } from './education/edu-template/edu-template.component';
 
 export const routes: Routes = [
     { path: '', title: 'Alvin Ng Wei Sing | Home', component: HomeComponent },
@@ -39,6 +40,7 @@ export const routes: Routes = [
     },
     { path: 'education',
         children: [
+            { path: 'template', title: 'Education Template', component: EduTemplateComponent },
             { path: '', title: 'Education | Alvin Ng', component: EducationComponent }
         ]
     },
