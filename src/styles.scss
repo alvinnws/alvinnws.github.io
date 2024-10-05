@@ -33,12 +33,23 @@ $portfolio-theme: mat.m2-define-light-theme((
     --shadow: #260103
 }
 
-#mainbody {
-    margin: 0px;
-    height: 100%;
-    background-color: rgba(253,238,235,1);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+a {
+  color: black;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+#mainbody {
+  margin: 0px;
+  height: 100%;
+  background-color: rgba(253,238,235,1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
