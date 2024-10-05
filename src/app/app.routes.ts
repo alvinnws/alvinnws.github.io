@@ -12,6 +12,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { EducationComponent } from './education/education.component';
 import { CertificatesComponent } from './certificates/certificates.component';
 import { EduTemplateComponent } from './education/edu-template/edu-template.component';
+import { SUTDComponent } from './education/sutd/sutd.component';
+import { SUTDCoursesComponent } from './education/sutd/sutdcourses/sutdcourses.component';
+import { ASRJCComponent } from './education/asrjc/asrjc.component';
 
 export const routes: Routes = [
     { path: '', title: 'Alvin Ng Wei Sing | Home', component: HomeComponent },
@@ -41,6 +44,13 @@ export const routes: Routes = [
     { path: 'education',
         children: [
             { path: 'template', title: 'Education Template', component: EduTemplateComponent },
+            { path: 'ASRJC', title: 'ASRJC', component: ASRJCComponent },
+            { path: 'SUTD', 
+                children: [
+                    { path: 'Courses', title: 'SUTD Coursework | Alvin Ng', component: SUTDCoursesComponent},
+                    { path: '', title: 'SUTD | Alvin Ng', component: SUTDComponent}
+                ]
+            },
             { path: '', title: 'Education | Alvin Ng', component: EducationComponent }
         ]
     },

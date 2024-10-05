@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [],
+  imports: [ MatButtonModule ],
   templateUrl: './education.component.html',
   styleUrl: './education.component.scss'
 })
