@@ -13,8 +13,8 @@ import { EducationComponent } from './education/education.component';
 import { CertificatesComponent } from './certificates/certificates.component';
 import { EduTemplateComponent } from './education/edu-template/edu-template.component';
 import { SUTDComponent } from './education/sutd/sutd.component';
-import { SUTDCoursesComponent } from './education/sutd/sutdcourses/sutdcourses.component';
 import { ASRJCComponent } from './education/asrjc/asrjc.component';
+import { SUTDCoursesComponent } from './education/sutd/sutdcourses/sutdcourses.component';
 
 export const routes: Routes = [
     { path: '', title: 'Alvin Ng Wei Sing | Home', component: HomeComponent },
