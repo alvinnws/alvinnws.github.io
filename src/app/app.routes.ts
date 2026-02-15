@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './home/home.component'; /*
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ContactComponent } from './contact/contact.component';
 import { LinksComponent } from './links/links.component';
@@ -12,10 +12,10 @@ import { CertificatesComponent } from './certificates/certificates.component';
 import { EduTemplateComponent } from './education/edu-template/edu-template.component';
 import { SUTDComponent } from './education/sutd/sutd.component';
 import { ASRJCComponent } from './education/asrjc/asrjc.component';
-import { SUTDCoursesComponent } from './education/sutd/sutdcourses/sutdcourses.component';
+import { SUTDCoursesComponent } from './education/sutd/sutdcourses/sutdcourses.component'; */
 
 export const routes: Routes = [
-    { path: '', title: 'Alvin Ng Wei Sing | Home', component: HomeComponent },
+    { path: '', title: 'Alvin Ng Wei Sing | Home', component: HomeComponent } /*,
     { path: 'links', component: LinksComponent},
     { path: 'contact-me', title: 'Contact Me | Alvin Ng', component: ContactComponent },
     { path: 'blog',
@@ -52,5 +52,5 @@ export const routes: Routes = [
             { path: '', title: 'Certificates | Alvin Ng', component: CertificatesComponent}
         ]
     },
-    { path: '**', pathMatch:'full', component: PagenotfoundComponent },
+    { path: '**', pathMatch:'full', component: PagenotfoundComponent }, */
 ];

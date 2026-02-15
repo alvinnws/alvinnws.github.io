@@ -1,15 +1,5 @@
 {
   "routes": [
-    "/",
-    "/blog",
-    "/blog/template",
-    "/certificates",
-    "/contact-me",
-    "/education",
-    "/links",
-    "/minigames",
-    "/minigames/tic-tac-toe",
-    "/projects",
-    "/work-experience"
+    "/"
   ]
 }

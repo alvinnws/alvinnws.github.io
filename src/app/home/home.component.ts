@@ -1,5 +1,5 @@
 import { ClipboardModule } from '@angular/cdk/clipboard';
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -42,7 +42,7 @@ export class HomeComponent {
   
   email = "official@alvinnws.com"
 
-  @HostListener('window:scroll', [])
+  /* @HostListener('window:scroll', [])
   onScroll() {
     let e = document.querySelector('#menu-bg') as HTMLElement;
     if (window.scrollY < 0) {
@@ -84,7 +84,7 @@ export class HomeComponent {
     st += String(c.green) + ',';
     st += String(c.blue) + ',1)';
     return st;
-  }
+  }*/
 
   constructor(
     private _snackBar: MatSnackBar, 
