@@ -1,2 +1,0 @@
-ng serve --host=0.0.0.0 --public-host=${CODESPACE_NAME}-4200.preview.app.github.dev
-
