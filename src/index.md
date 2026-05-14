@@ -9,7 +9,7 @@ I'm currently studying at [Singapore University of Technology and Design (SUTD)]
 - majoring in [Computer Science and Design](https://www.sutd.edu.sg/istd/education/undergraduate/curriculum/)
 - holding the Global Distinguished Scholarship
 - serving in ROOT's (Student Government) Exco, as Secretary of Orientation
-- serving in ISTD's Pillar Exco (Junior)
+- serving in [ISTD's Pillar Exco (Junior)](https://www.sutd.edu.sg/istd/people/advisory-board/undergraduate-student-board/#tabs)
 - a teaching assistant for [10.020 Data Driven World](https://www.sutd.edu.sg/course/10-020-data-driven-world-elective/)
 
 In the past, I was a:
