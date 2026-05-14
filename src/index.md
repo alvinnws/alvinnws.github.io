@@ -1,6 +1,6 @@
 ---
 title: "Alvin Ng Wei Sing | About"
-layout: base.njk
+layout: layouts/base.njk
 ---
 
 # Hi, I'm Alvin :D  
