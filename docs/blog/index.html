@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>blog!</title>
+        <title>Blog</title>
         <style>html {
     font-family: "Aleo";
 }
@@ -50,7 +50,34 @@ a {
     color: #006633;
     font-weight: 600;
 }
-</style>
+
+a:hover {
+    text-decoration: underline;
+}
+
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-link {
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+}</style>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -70,8 +97,13 @@ a {
         </header>
 
         <main>
-            <p>hello! theres nothing here yet :o</p>
+            
+<h1>Blog</h1>
+<p>A list of all my posts</p>
 
+
+<ol reversed class="postlist" style="--postlist-index: 1">
+</ol>
         </main>
     </body>
 </html>

@@ -50,7 +50,34 @@ a {
     color: #006633;
     font-weight: 600;
 }
-</style>
+
+a:hover {
+    text-decoration: underline;
+}
+
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-link {
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+}</style>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -76,7 +103,7 @@ a {
 <li>majoring in <a href="https://www.sutd.edu.sg/istd/education/undergraduate/curriculum/">Computer Science and Design</a></li>
 <li>holding the Global Distinguished Scholarship</li>
 <li>serving in ROOT's (Student Government) Exco, as Secretary of Orientation</li>
-<li>serving in ISTD's Pillar Exco (Junior)</li>
+<li>serving in <a href="https://www.sutd.edu.sg/istd/people/advisory-board/undergraduate-student-board/#tabs">ISTD's Pillar Exco (Junior)</a></li>
 <li>a teaching assistant for <a href="https://www.sutd.edu.sg/course/10-020-data-driven-world-elective/">10.020 Data Driven World</a></li>
 </ul>
 <p>In the past, I was a:</p>
