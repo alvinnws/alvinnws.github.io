@@ -13,6 +13,7 @@ nav {
 
 .nav-link {
     padding: 0px 5px 0px 5px;
+    font-weight: 700;
 }
 
 .nav-icon {
@@ -42,7 +43,7 @@ main {
 a {
     text-decoration: none;
     color: #006633;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 a:hover {
