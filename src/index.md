@@ -9,7 +9,7 @@ At the present moment, I'm looking for internships for:
 - Jan-Jun 2027 AND Jun-Aug 2027  
 - OR Jan-Aug 2027  
 
-Feel free to reach out to me via alvinnws4546 [at] gmail.com, and find my resume [here](https://www.alvinnws.com/Resume.pdf)
+Feel free to reach out to me via alvinnws4546 [at] gmail.com, and find my resume [here](https://www.alvinnws.com/assets/Resume.pdf)
 
 I'm currently studying at [Singapore University of Technology and Design (SUTD)](https://www.sutd.edu.sg) where I am:
 - majoring in [Computer Science and Design](https://www.sutd.edu.sg/istd/education/undergraduate/curriculum/)
